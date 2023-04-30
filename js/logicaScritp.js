@@ -9,18 +9,11 @@ const tablaEncriptacion = {
     'o':'ober',
     'u':'ufat'
 };
-/*
-const tablaDesencriptacion = {
-    'a':2,
-    'e':5,
-    'i':4,
-    'o':4,
-    'u':4,
-};
-*/
+
 function encriptarTexto() {
     var textoLimpio = document.getElementById("textToEncritp").value;
     var textoEncriptado = ''; // Creamos una cadena de texto vacia para luego irla manipulando.
+    var img = document.getElementById("imgChange");
     for (let index = 0; index < textoLimpio.length; index++) {
         const letra = textoLimpio[index].toLowerCase();//se recorre todo el string con el index como parametro para
         //recoger todas la lestras y hacer la evaluacion posterior
@@ -36,6 +29,8 @@ function encriptarTexto() {
     document.getElementById("textToEncritp").value = ""; //reseteo el input para no dejar rastro del texto inicial
     document.getElementById("textToEncritp").placeholder = "Ingrese el texto que desea encriptar o desencriptar";
     //hace parte del seteo anterior.
+    document.getElementById("imgChange").style.display = "none";
+    img.setAttribute("src","imagenes/diamod.svg");
 }
 
 /*Entonces para desencriptar es un poco mas complejo en la medida que debes encontrar el equivale que en termino de cadena 
