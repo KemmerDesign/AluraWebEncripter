@@ -30,7 +30,9 @@ function encriptarTexto() {
     document.getElementById("textToEncritp").placeholder = "Ingrese el texto que desea encriptar o desencriptar";
     //hace parte del seteo anterior.
     document.getElementById("imgChange").style.display = "none";
-    img.setAttribute("src","imagenes/diamod.svg");
+    //img.setAttribute("src","imagenes/diamod.svg");
+    window.alert("Para desencriptar el texto no olvide copiar el texto encriptado y pegarlo"
+     + " en la recuadro texto para poder desencriptar");
 }
 
 /*Entonces para desencriptar es un poco mas complejo en la medida que debes encontrar el equivale que en termino de cadena 
@@ -56,4 +58,5 @@ function desencriptarTexto(){
     document.getElementById("textToEncritp").value = ""; //reseteo el input para no dejar rastro del texto inicial
     document.getElementById("textToEncritp").placeholder = "Ingrese el texto que desea encriptar o desencriptar";
     //hace parte del seteo anterior.
+    document.getElementById("imgChange").style.display = "block";
 }
